@@ -15,6 +15,23 @@
     overflow: hidden;
 }
 
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: #f7f8f9;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    transition: opacity .5s ease-in-out;
+}
+
+.loadingIcon {
+    animation: loadingAnimation 1s infinite ease-in-out;
+}
+
 .dialogContainer {
     display: flex;
     flex-direction: column;
@@ -101,7 +118,13 @@
 
 .envelopePaper p {
     font-family: "Shantell Sans";
-    line-height: 1.75;
+    line-height: 2;
+}
+
+@keyframes loadingAnimation {
+    0% {transform: scale(0.75);}
+    50% {transform: scale(1.25);}
+    100% {transform: scale(0.75);}
 }
 
 @keyframes envelopeOutsideAnimation{

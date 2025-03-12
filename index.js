@@ -1,3 +1,4 @@
+const loading = document.getElementsByClassName("loading")[0];
 const acceptBtn = document.getElementsByClassName("accept")[0];
 const declineBtn = document.getElementsByClassName("decline")[0];
 const questionTxt = document.getElementsByClassName("question")[0];
@@ -8,6 +9,14 @@ const envelopeOutsideImage = document.getElementsByClassName("envelopeOutsideIma
 const envelopePaper = document.getElementsByClassName("envelopePaper")[0];
 
 let count = 0;
+
+document.onreadystatechange = () => {
+    if (document.readyState === "complete")
+    {
+        loading.style.opacity = 0
+        setInterval(() => loading.remove(), 500)
+    }
+}
 
 acceptBtn.addEventListener("click", () => {
     count++
