@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ec1f41;
+    overflow: hidden;
+}
+
+.dialogContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    transition: opacity .5s ease-in-out;
+}
+
+.dialogImage {
+    width: 5rem;
+    height: 5rem;
+}
+
+.dialogButtonContainer {
+    display: flex;
+    gap: .5rem;
+}
+
+.dialogButton {
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+}
+
+.accept {
+    background: #00ab41;
+}
+
+.accept:hover {
+    background: #008631;
+}
+
+.decline {
+    position: relative;
+    background: #df2c14;
+}
+
+.decline:hover {
+    background: #c61a09;
+}
+
+.envelope {
+    display: none;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    transition: all .5s ease-in-out;
+}
+
+.envelopeOutsideImage {
+    width: 24rem;
+    rotate: -8deg;
+    position: relative;
+    animation: envelopeOutsideAnimation 2s infinite ease-in-out;
+    cursor: pointer;
+}
+
+.envelopePaper {
+    display: none;
+    opacity: 0;
+    width: 40%;
+    border-radius: .5rem;
+    padding: 1.5rem;
+    background: #eee7e4;
+    position: absolute;
+    overflow: scroll;
+    scrollbar-width: none;
+    z-index: 100;
+    transition: opacity .5s ease-in-out;
+}
+
+.envelopePaper--sticker {
+    width: 6rem;
+}
+
+.envelopePaper p {
+    font-family: "Shantell Sans";
+    line-height: 1.75;
+}
+
+@keyframes envelopeOutsideAnimation{
+    0% {top: 0rem}
+    50% {top: 2rem}
+    100% {top: 0rem}
+}
+
+@media (max-width: 30rem) {
+    .envelopeOutsideImage {
+        width: 20rem;  
+    }
+
+    .envelopePaper {
+        width: 80%;
+        height: 60%;
+    }
+}
