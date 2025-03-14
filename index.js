@@ -26,7 +26,7 @@ acceptBtn.addEventListener("click", () => {
         {
             image.src = "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWd6amptNWRiYXNpaG14MTd5YXZxaGxndWJuZ2tpbmNjaTl4d3h4aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ii7npo9yk9yupSZ0sH/giphy.gif"
         }
-        questionTxt.innerHTML = "Tường đồng ý làm người yêu tui nhé?"
+        questionTxt.innerHTML = "Cậu đồng ý làm người yêu tớ nhé?"
     }
     if (count === 2)
     {
