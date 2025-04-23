@@ -1,145 +1,168 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  user-select: none;
 }
 
 #container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: #ec1f41;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ec1f41;
+  overflow: hidden;
 }
 
 .loading {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    background-color: #f7f8f9;
-    width: 100vw;
-    height: 100vh;
-    z-index: 10;
-    transition: opacity .5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: #f7f8f9;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .loadingIcon {
-    animation: loadingAnimation 1s infinite ease-in-out;
+  animation: loadingAnimation 1s infinite ease-in-out;
 }
 
 .dialogContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    background: #fff;
-    border-radius: 1rem;
-    padding: 1rem 2rem;
-    transition: opacity .5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 1rem;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .dialogImage {
-    width: 5rem;
-    height: 5rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 .dialogButtonContainer {
-    display: flex;
-    gap: .5rem;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .dialogButton {
-    color: #fff;
-    font-weight: bold;
-    border: none;
-    border-radius: 1rem;
-    padding: 1rem 1.5rem;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
 }
 
 .accept {
-    background: #00ab41;
+  background: #00ab41;
 }
 
 .accept:hover {
-    background: #008631;
+  background: #008631;
 }
 
 .decline {
-    position: relative;
-    background: #df2c14;
+  position: relative;
+  background: #df2c14;
 }
 
 .decline:hover {
-    background: #c61a09;
+  background: #c61a09;
+}
+
+.cre {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.625rem;
+  position: absolute;
+  left: 0;
+  bottom: -1.25rem;
 }
 
 .envelope {
-    display: none;
-    opacity: 0;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    transition: all .5s ease-in-out;
+  display: none;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  transition: all 0.5s ease-in-out;
 }
 
 .envelopeOutsideImage {
-    width: 24rem;
-    rotate: -8deg;
-    position: relative;
-    animation: envelopeOutsideAnimation 2s infinite ease-in-out;
-    cursor: pointer;
+  width: 24rem;
+  rotate: -8deg;
+  position: relative;
+  animation: envelopeOutsideAnimation 2s infinite ease-in-out;
+  cursor: pointer;
 }
 
 .envelopePaper {
-    display: none;
-    opacity: 0;
-    width: 40%;
-    border-radius: .5rem;
-    padding: 1.5rem;
-    background: #eee7e4;
-    position: absolute;
-    overflow: scroll;
-    scrollbar-width: none;
-    z-index: 100;
-    transition: opacity .5s ease-in-out;
+  display: none;
+  opacity: 0;
+  width: 40%;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  background: #eee7e4;
+  position: absolute;
+  overflow: scroll;
+  scrollbar-width: none;
+  z-index: 100;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .envelopePaper--sticker {
-    width: 6rem;
+  width: 6rem;
 }
 
 .envelopePaper p {
-    font-family: "Shantell Sans";
-    line-height: 2;
+  font-family: "Shantell Sans";
+  line-height: 2;
 }
 
 @keyframes loadingAnimation {
-    0% {transform: scale(0.75);}
-    50% {transform: scale(1.25);}
-    100% {transform: scale(0.75);}
+  0% {
+    transform: scale(0.75);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(0.75);
+  }
 }
 
-@keyframes envelopeOutsideAnimation{
-    0% {top: 0rem}
-    50% {top: 2rem}
-    100% {top: 0rem}
+@keyframes envelopeOutsideAnimation {
+  0% {
+    top: 0rem;
+  }
+  50% {
+    top: 2rem;
+  }
+  100% {
+    top: 0rem;
+  }
 }
 
 @media (max-width: 30rem) {
-    .envelopeOutsideImage {
-        width: 20rem;  
-    }
+  .envelopeOutsideImage {
+    width: 20rem;
+  }
 
-    .envelopePaper {
-        width: 80%;
-        height: 60%;
-    }
+  .envelopePaper {
+    width: 80%;
+    height: 60%;
+  }
 }
